@@ -19,13 +19,18 @@ has_profile() {
 if [ -z "$1" ]; then
 	echo "usage: $0 </dev/dri/renderD128>"
 	exit 1;
+elif [ ! -e "$1" ]; then
+	echo "error: invalid renderer: $1"
+	exit 1;
 fi
 
 command -v vainfo >/dev/null 2>&1 || { echo >&2 "'vainfo' is not installed. Aborting."; exit 1; }
 
+DEVICE="$1"
+
 # get VAInfo details
-HW_INFO_DECODING=$(vainfo --display drm --device /dev/dri/renderD128 2> /dev/null | grep VAEntrypointVLD | cut -d ':' -f1 | sort | uniq)
-HW_INFO_ENCODING=$(vainfo --display drm --device /dev/dri/renderD128 2> /dev/null | grep VAEntrypointEncSlice | cut -d ':' -f1 | sort | uniq)
+HW_INFO_DECODING=$(vainfo --display drm --device "$DEVICE" 2> /dev/null | grep VAEntrypointVLD | cut -d ':' -f1 | sort | uniq)
+HW_INFO_ENCODING=$(vainfo --display drm --device "$DEVICE" 2> /dev/null | grep VAEntrypointEncSlice | cut -d ':' -f1 | sort | uniq)
 
 # decoding
 echo "Supported HW Decoding:"
