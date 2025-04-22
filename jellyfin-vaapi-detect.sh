@@ -45,7 +45,7 @@ has_profile "MPEG2" "$HW_INFO_DECODING" VAProfileMPEG2Main VAProfileMPEG2Simple
 has_profile "VC1" "$HW_INFO_DECODING" VAProfileVC1Simple VAProfileVC1Main VAProfileVC1Advanced
 has_profile "VP8" "$HW_INFO_DECODING" VAProfileVP8Version0_3
 has_profile "VP9" "$HW_INFO_DECODING" VAProfileVP9Profile0 VAProfileVP9Profile1
-has_profile "VP9 10BIT" "$HW_INFO_DECODING" VAProfileVP9Profile2 VAProfileVP9Profile3
+has_profile "VP9 10bit" "$HW_INFO_DECODING" VAProfileVP9Profile2 VAProfileVP9Profile3
 
 #encoding
 echo "Supported HW Encoding:"
@@ -60,4 +60,4 @@ has_profile "MPEG2" "$HW_INFO_ENCODING" VAProfileMPEG2Main VAProfileMPEG2Simple
 has_profile "VC1" "$HW_INFO_ENCODING" VAProfileVC1Simple VAProfileVC1Main VAProfileVC1Advanced
 has_profile "VP8" "$HW_INFO_ENCODING" VAProfileVP8Version0_3
 has_profile "VP9" "$HW_INFO_ENCODING" VAProfileVP9Profile0 VAProfileVP9Profile1
-has_profile "VP9 10BIT" "$HW_INFO_ENCODING" VAProfileVP9Profile2 VAProfileVP9Profile3
+has_profile "VP9 10bit" "$HW_INFO_ENCODING" VAProfileVP9Profile2 VAProfileVP9Profile3
