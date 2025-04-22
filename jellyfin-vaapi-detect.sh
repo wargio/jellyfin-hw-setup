@@ -49,5 +49,15 @@ has_profile "VP9 10BIT" "$HW_INFO_DECODING" VAProfileVP9Profile2 VAProfileVP9Pro
 
 #encoding
 echo "Supported HW Encoding:"
-has_profile "HEVC" "$HW_INFO_ENCODING" VAProfileHEVCMain VAProfileHEVCSccMain
 has_profile "AV1" "$HW_INFO_ENCODING" VAProfileAV1Profile0 VAProfileAV1Profile1
+has_profile "H264" "$HW_INFO_ENCODING" VAProfileH264Baseline VAProfileH264Main VAProfileH264High VAProfileH264ConstrainedBaseline
+has_profile "HEVC" "$HW_INFO_ENCODING" VAProfileHEVCMain VAProfileHEVCSccMain
+has_profile "HEVC 10bit" "$HW_INFO_ENCODING" VAProfileHEVCMain10 VAProfileHEVCSccMain10
+has_profile "HEVC Rext 8/10bit" "$HW_INFO_ENCODING" VAProfileHEVCMain444 VAProfileHEVCSccMain444 VAProfileHEVCMain422_10 VAProfileHEVCMain444_10 VAProfileHEVCSccMain444_10
+has_profile "HEVC Rext 12bit" "$HW_INFO_ENCODING" VAProfileHEVCMain12 VAProfileHEVCMain422_12 VAProfileHEVCMain444_12
+has_profile "MJPEG" "$HW_INFO_ENCODING" VAProfileJPEGBaseline
+has_profile "MPEG2" "$HW_INFO_ENCODING" VAProfileMPEG2Main VAProfileMPEG2Simple
+has_profile "VC1" "$HW_INFO_ENCODING" VAProfileVC1Simple VAProfileVC1Main VAProfileVC1Advanced
+has_profile "VP8" "$HW_INFO_ENCODING" VAProfileVP8Version0_3
+has_profile "VP9" "$HW_INFO_ENCODING" VAProfileVP9Profile0 VAProfileVP9Profile1
+has_profile "VP9 10BIT" "$HW_INFO_ENCODING" VAProfileVP9Profile2 VAProfileVP9Profile3
