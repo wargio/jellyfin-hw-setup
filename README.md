@@ -1,6 +1,11 @@
 # jellyfin-hw-setup
 A collection of script to configure jellyfin transcoding 
 
+### FAQ
+
+- `'vainfo' is not installed. Aborting.`: **Please install `vainfo`**.
+- `The output is empty`: **Please ensure you have installed the vaapi drivers needed by your HW**.
+
 ### Example on 12th Gen Intel
 
 ```bash
